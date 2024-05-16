@@ -193,7 +193,7 @@ html {
 /* Jump box styles */
 #jumpBox {
   position: absolute;
-  top: 241px; /* Adjust to position it relative to the "Museums" tab */
+  top: 236px; /* Adjust to position it relative to the "Museums" tab */
   left: 225px; /* Adjust to position it relative to the "Museums" tab */
   width: 120px;
   padding: 10px;
