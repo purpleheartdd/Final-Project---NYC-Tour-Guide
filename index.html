@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to Your Interactive New York City Tour Guide</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v3.2.0/mapbox-gl.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v3.2.0/mapbox-gl.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+</head>
+
+<body>
+
+  <div id="blurMask">
+    <div id="introMessage">
+      <h1>Welcome to Your Interactive New York City Tour Guide</h1>
+      <button onclick="removeBlurMask()">Explore the Map</button>
+    </div>
+  </div>
+
+  <div id="leftContainer">
+    <div class="header">
+        <div id="title"><strong> NYC<br>Tour<br>Guide</strong></div>
+    </div>
+    <div class="tabs">
+        <button id="museumsTab" class="tab" onclick="changeCategory('Museums')">Museums</button>
+        <div id="MuseumsExplanation" class="explanation">Museums in NYC offer a glimpse into the city's rich history, art, and culture.</div>
+        <button class="tab" onclick="changeCategory('Landmarks')">Landmarks</button>
+        <div id="LandmarksExplanation" class="explanation">NYC Landmarks are iconic places you must visit for their historical and cultural significance.</div>
+        <button class="tab" onclick="changeCategory('Parks')">Parks</button>
+        <div id="ParksExplanation" class="explanation">Parks in NYC provide beautiful green spaces to relax and enjoy nature.</div>
+        <button class="tab" onclick="changeCategory('Restaurants')">Restaurants</button>
+        <div id="RestaurantsExplanation" class="explanation">Discover the best dining experiences NYC has to offer, from casual eateries to gourmet restaurants.</div>
+        <button class="tab" onclick="changeCategory('SubwayStations')">Subway Stations</button>
+        <div id="SubwayStationsExplanation" class="explanation">Find the closest subway stations to the recommended places.</div>
+        <button class="tab" onclick="showAll()">Show All</button>
+    </div>
+    <div id="intro">
+      Explore various popular places in NYC! First, select the category you are interested
+      in visiting listed below, and then click on the dots for more details!
+    </div>
+  </div>
+
+  <div id="rightContainer">
+      <div id="map"></div>
+  </div>
+
+  <div id="jumpBox">
+    <div id="arrow"></div>
+    <div id="jumpText">Click Museums to start</div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+
+</html>
